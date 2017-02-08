@@ -65,7 +65,7 @@
       <h5><span class="label label-danger">Knowlegde</span> <span class="label label-primary">Grid</span></h5><br>
       <div class="panel-body"><button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click here</button>
   <div id="demo" class="collapse">
-        <p class="text-primary">ในการแสดงผลของ web นั้นในอดีตแสดงให้แก่หน้าจอน้อยประเภท ส่วนใหญ่คือหน้าจอ pc หรือไม่ก็ notebook ไม่ได้หลากหลายเท่าปัจจุบัน ในปัจจุบันมีขนาดหน้าจอเพิ่มขึ้น 
+        <p class="bg-info">ในการแสดงผลของ web นั้นในอดีตแสดงให้แก่หน้าจอน้อยประเภท ส่วนใหญ่คือหน้าจอ pc หรือไม่ก็ notebook ไม่ได้หลากหลายเท่าปัจจุบัน ในปัจจุบันมีขนาดหน้าจอเพิ่มขึ้น 
           ไม่ว่าจะเป็น tablet หรือ smart phone ทำให้ web ที่ได้ทำการพัฒนาขึ้นต้องรองรับในความหลากหลายนี้ให้ได้ Bootstrap ก็เช่นกัน เนื่องจาก Bootstrap 
           เป็นเครื่องมือในการสร้าง web แบบ responsive ด้วย ทำให้ขาดคุณสมบัติเกี่ยวกับการแสดงผลในหน้าจอที่มีขนาดที่หลากหลายไปไม่ได้ และต้องรองรับความแตกต่างของหน้าจอให้ได้
           Bootstrap ได้ใช้หลักการซอยย่อยหน้าจอเป็นส่วนๆ โดยแต่ละส่วนนั้นเป็นแนวตั้ง หรือที่เรียกว่า คอลัมภ์ โดยมี 12 กล่อง ดังรูป</p>
@@ -119,9 +119,30 @@
       <div class="panel-heading">การใช้งาน Form</div>
       <h5><span class="glyphicon glyphicon-time"></span> Post by Rattasart Laochamanrnkit, Feb 5, 2017.</h5>
       <h5><span class="label label-success">Knowlegde</span> <span class="label label-info">Form</span></h5><br>
-      <div class="panel-body"><p class="text-primary">การสร้าง ฟอร์มรับข้อมูลโดยใช้ความสามารถของ Bootstrap3</p>
-       <p class="text-primary"> อันดับแรกเลยมาดูกันก่อนว่าทาง Bootstrap เค้าเตรียมลักษณะของ Class อะไรบ้างมาไว้ช่วยเรา</p>
-<p class="text-primary">เริ่มต้นกันด้วยเมื่อคุณสร้าง &lt;form&gt; ขึ้นมาให้คุณเติม <span class="na">role=</span><span class="s">&#8220;form&#8221; ลงไปก่อนแบบนี้</span></p></div>
+      <div class="panel-body"><p class="text-primary">ฟอร์ม (Form)
+
+การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มีคลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และน่าใช้งานมากยิ่งขึ้น 
+โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก <code>&lt;"input"&gt;</code>, <code>&lt;"textarea"&gt;</code> และ <code>&lt;"select"&gt;</code> โดยเราต้องทำการเพิ่มคลาส .form-control
+   ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรลนั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท style="width: XXXpx;"
+    และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาดเท่ากับขนาดของ Grid ตัวอย่างฟอ <span class="na">role=</span><span class="s">&#8220;form&#8221; ลงไปก่อนแบบนี้</span></p></div>
+     
+       <hr>
+<div class="highlight"><pre><code class="lineno"> 1</code> <code class="nt">&lt;form</code> <code class="na">role=</code><code class="s">"form"</code><code class="nt">&gt;</code>
+<code class="lineno"> 2</code>   <code class="nt">&lt;div</code> <code class="na">class=</code><code class="s">"form-group"</code><code class="nt">&gt;</code>
+<code class="lineno"> 3</code>     <code class="nt">&lt;label</code> <code class="na">for=</code><code class="s">"txt_email"</code><code class="nt">&gt;</code>Email address<code class="nt">&lt;/label&gt;</code>
+<code class="lineno"> 4</code>     <code class="nt">&lt;input</code> <code class="na">type=</code><code class="s">"email"</code> <code class="na">class=</code><code class="s">"form-control"</code> 
+<code class="lineno"> 5</code>       <code class="na">id=</code><code class="s">"txt_email"</code> <code class="na">placeholder=</code><code class="s">"Enter email"</code><code class="nt">&gt;</code>
+<code class="lineno"> 6</code>   <code class="nt">&lt;/div&gt;</code>
+<code class="lineno"> 7</code>   <code class="nt">&lt;div</code> <code class="na">class=</code><code class="s">"form-group"</code><code class="nt">&gt;</code>
+<code class="lineno"> 8</code>     <code class="nt">&lt;label</code> <code class="na">for=</code><code class="s">"txt_pass"</code><code class="nt">&gt;</code>Password<code class="nt">&lt;/label&gt;</code>
+<code class="lineno"> 9</code>     <code class="nt">&lt;input</code> <code class="na">type=</code><code class="s">"password"</code> <code class="na">class=</code><code class="s">"form-control"</code> 
+<code class="lineno">10</code>       <code class="na">id=</code><code class="s">"txt_pass"</code> <code class="na">placeholder=</code><code class="s">"Password"</code><code class="nt">&gt;</code>
+<code class="lineno">11</code>   <code class="nt">&lt;/div&gt;</code>
+<code class="lineno">12</code>  <code class="nt">&lt;button</code> <code class="na">type=</code><code class="s">"submit"</code> <code class="na">class=</code><code class="s">"btn btn-default"</code><code class="nt">&gt;</code>
+<code class="lineno">13</code>    Submit
+<code class="lineno">14</code>  <code class="nt">&lt;/button&gt;</code>
+<code class="lineno">15</code> <code class="nt">&lt;/form&gt;</code>
+</pre></div>  </div>
       </div>
       <hr>
 
