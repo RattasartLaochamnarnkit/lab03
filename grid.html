@@ -1,0 +1,135 @@
+<html>
+    <head></head>
+    <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>การใช้งาน Grid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Rattasart's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="angsila.cs.buu.ac.th/~58160422/887371/lab03/lab03.html">Home</a></li>
+        <li><a href="angsila.cs.buu.ac.th/~58160422/887371/lab03/grid.html">Grid</a></li>
+        <li><a href="angsila.cs.buu.ac.th/~58160422/887371/lab03/form.html">Form</a></li>
+        
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-info" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+              <h4 ><font size="5">การใช้งานGrid</h4></font>
+        เป็นเครื่องมือที่ช่วยให้เราสามารถออกแบบเลย์เอาท์เอกสาร HTML ได้ดีเหมือนกับการใช้แท็ก table แต่ความเร็วในการโหลดเอกสารนั้นการใช้ <code>&lt;div&gt;</code> จะช่วยให้โหลดเอกสารได้เร็วขึ้น <br>
+        นอกจากนั้นยังช่วยให้เราสามารถออกแบบเลย์เอาท์สำหรับมือถือ และบนพีซีได้พร้อมๆ กัน หรือที่เราเรียกว่า Responsive Web Design (RWD) <br>ซึ่งจะช่วยลดระยะเวลาในการพัฒนาได้มากขึ้น
+ระบบ Grid ของ Bootstrap นั้นจะแบ่งหน้าจอออกเป็น 12 คอลัมน์ โดยสามารถกำหนดค่าให้สามารถใช้ได้<br>ทั้งมือถือ แท็บเล็ต หรือพีซีทั่วไป โดยคลาสกำหนดค่าความกว้างของคอลัมน์ ดังนี้</p>
+<p>ซึ่งในแต่ละ row จะมีกี่ column ก็ได้ แต่ทั้งแถวต้องมีขนาด column รวมกันเท่ากับ 12 เท่านั้น และ row ต่างกัน ไม่จำเป็นต้องมีจำนวน  column เท่ากัน <br>
+แต่ทุก column ต้องอยู่ภายใต row และแต่ละ row จะมีความสูงต่างกันได้ ขึ้นอยู่กับข้อมูลที่ใส่ใน column นั้นๆ</p>
+<p>ส่วนใหญ่จะนำมาสร้าง layout ของ web แทน frame แทน table  ซึ่ง grid นั้นจะใช้ &lt;div&gt;
+     ในการวาง layout และมีการไปเรียก class ที่ Bootstrap <br>ได้กำหนดไว้แล้ว โดยลำดับแรกต้องสร้างกล่องสำหรับบรรจุของได้ 
+     class container หรือ container-fluid โดย container นั้นเป็นแบบ fixed ความกว้าง<br> 
+      คือจะกำหนดความกว้างมาตามขนาดของหน้าจอ ส่วน container-fluid จะใช้การกำหนดความกว้างแบบ full-width ซึ่งก็คือใช้แบบ %  <br /></p>
+    
+    <p class="bg-danger"><code >&lt;div class="container"&gt;....&lt;/div&gt;</code></strong></p><br/> 
+ขั้นตอนต่อไปก็คือกำหนด row ให้กล่องใหญ่ ซึ่งคล้ายกับการใช้ &lt;tr&gt; ของ html แต่ใน Bootstrap จะใช้ class row แทน ดัง code ต่อไปนี้<br />
+<p class="bg-danger"><code>&lt;div class="container"&gt;</code><br/>
+<p class="bg-danger"><code>&lt;div class="row"&gt;....&lt;/div&gt;</code><br/>
+<p class="bg-danger"><code>&lt;/div&gt;</code></p>
+
+<p>ขั้นต่อไปการสร้างกล่อง column ภายใต้ row เปรียบกับ &lt;table&gt; ก็คือ &lt;td&gt;นั่นแหละครับ <br>
+ซึ่งตรงนี้เป็นที่เดียวที่ควรใส่ content ต่างๆ ลงไป (จริงๆ ก็อิงจาก table มาเลย) class css ที่ Bootstrap ใช้สำหรับกำหนดขนาด column นั้น<br>
+ จะอิงตามจำนวน grid พูดง่ายๆ ก็คือ มี 12 ขนาด จำนวนรวมของขนาดของทุก column ต้องเท่ากับ 12 ถ้าเกิน column <br>
+ ที่ทำให้ขนาดเกินจะตกไปอีกบรรทัดหนึ่ง และอาจทำให้การแสดงผล layout ไม่ตรงกับที่ต้องการได้</p>
+<p>class ที่ใช้จะขึ้นต้นด้วย col- เสมอ และตามด้วยประเภทของขนาดหน้าจอ ซึ่งมี 4 ประเภท <br>
+แล้วตามด้วยเลขที่บ่งบอกขนาดของ column นั้นๆ <br>
+ซึ่งจะมีตั้งแต่ 1-12 โดยประเภทของหน้าจอทั้ง 4 ประเภทมีดังต่อไปนี้</p>
+<table border="2">
+<thead>
+<tr>
+<th>class</th>
+<th>ประเภทหน้าจอ</th>
+<th>ขนาดหน้าจอ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.col-xs-</td>
+<td>Smart Phone</td>
+<td>&lt;768px</td>
+</tr>
+<tr>
+<td>.col-sm-</td>
+<td>Tablet</td>
+<td><span style="color: #222222;">≥</span>768px</td>
+</tr>
+<tr>
+<td>.col-md-</td>
+<td>Desktop ขนาดกลาง</td>
+<td><span style="color: #222222;">≥992</span>px</td>
+</tr>
+<tr>
+<td>.col-lg-</td>
+<td>Desktop ขนาดใหญ่</td>
+<td><span style="color: #222222;">≥1200</span>px</td>
+</tr>
+</tbody>
+</table>
+
+<p>ถ้าเราต้องการกำหนดว่า row นั้นมี column เดียว จะต้องใช้กล่องขนาด 12 เลย ดัง code ต่อไปนี้<br /></p>
+<p class="bg-danger"><code>&lt;div class="col-md-12"&gt;...&lt;/div&gt;</code></p>
+<p >ถ้าเราต้องการกำหนดว่า row นั้นมี 2 column ขนาดเท่าๆ กัน จะต้องใช้กล่องขนาด 6 จำนวน 2 กล่อง ดัง code ต่อไปนี้<br /></p>
+<p class="bg-danger"><code>&lt;div class="col-md-6"&gt;...&lt;/div&gt;</code></p><br/>
+<p class="bg-danger"><code>&lt;div class="col-md-6"&gt;...&lt;/div&gt;</code></p>
+<p >ถ้าเราต้องการกำหนดว่า row นั้นมี 2 column ขนาดไม่เท่ากัน จะต้องใช้กล่อง 2 กล่อง แต่ขนาดเป็น 8 4 หรือ 3 9 หรือเท่าใดก็ได้ แต่ต้องรวมให้ได้ 12 เช่น code ต่อไปนี้<br /></p>
+<p class="bg-danger"><code>&lt;div class="col-md-8"&gt;...&lt;/div&gt;</code></p><br/>
+<p class="bg-danger"><code>&lt;div class="col-md-4"&gt;...&lt;/div&gt;</code></p><br/>
+<p>เมื่อเรากำหนดกล่องตามด้านบนครบทั้ง 3 ขั้นตอนแล้ว เราก็จะได้ layout ของหน้า web ที่ต้องการ<br /></div></p>  
+      </div>
+      <br><br>
+</body>
+</html>
+
+  
