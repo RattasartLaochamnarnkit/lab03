@@ -42,17 +42,17 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4>John's Blog</h4>
+      <h4>Rattasart's Blog</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>
+        <li class="active"><a href="angsila.cs.buu.ac.th/~58160422/887371/lab03/lab03.html">Home</a></li>
+        <li><a href="#section2">Grid</a></li>
+        <li><a href="angsila.cs.buu.ac.th/~58160422/887371/lab03/form.html">Form</a></li>
+        
       </ul><br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
+          <button class="btn btn-info" type="button">
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
@@ -62,43 +62,47 @@
     <div class="col-sm-9">
       <h4><small>RECENT POSTS</small></h4>
       <hr>
-      <h2>I Love Food</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Jane Dane, Sep 27, 2015.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h2>การใช้งาน Form</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Rattasart Laochamanrnkit, Feb 5, 2017.</h5>
+      <h5><span class="label label-danger">Knownledge</span> <span class="label label-primary">form</span></h5><br>
+ ฟอร์ม (Form)<br>การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ ของฟอร์มในเอกสารนั้น Bootstrap มีคลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และน่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก <code>&lt;"input"&gt;</code>, <code>&lt;"textarea"&gt;</code> และ <code>&lt;"select"&gt;</code> 
+      โดยเราต้องทำการเพิ่มคลาส .form-controlให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรลนั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท style="width: XXXpx;"
+    และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาดเท่ากับขนาดของ Grid ตัวอย่าง <span class="na">role=</span><span class="s">&#8220;form&#8221; ลงไปก่อนแบบนี้โดยform ใน bootstrapจะมีทั้งหมด3แบบคือ
+    <br>  1.รูปแบบแนวตั้ง (นี้เป็นค่าเริ่มต้น)
+<br>2.รูปแบบแนวนอน
+<br>3.รูปแบบอินไลน์</span></p></div>
       <br><br>
-        <hr>
-<div class="highlight"><pre><code class="lineno"> 1</code> <code class="nt">&lt;form</code> <code class="na">role=</code><code class="s">"form"</code><code class="nt">&gt;</code>
-<code class="lineno"> 2</code>   <code class="nt">&lt;div</code> <code class="na">class=</code><code class="s">"form-group"</code><code class="nt">&gt;</code>
-<code class="lineno"> 3</code>     <code class="nt">&lt;label</code> <code class="na">for=</code><code class="s">"txt_email"</code><code class="nt">&gt;</code>Email address<code class="nt">&lt;/label&gt;</code>
-<code class="lineno"> 4</code>     <code class="nt">&lt;input</code> <code class="na">type=</code><code class="s">"email"</code> <code class="na">class=</code><code class="s">"form-control"</code> 
-<code class="lineno"> 5</code>       <code class="na">id=</code><code class="s">"txt_email"</code> <code class="na">placeholder=</code><code class="s">"Enter email"</code><code class="nt">&gt;</code>
-<code class="lineno"> 6</code>   <code class="nt">&lt;/div&gt;</code>
-<code class="lineno"> 7</code>   <code class="nt">&lt;div</code> <code class="na">class=</code><code class="s">"form-group"</code><code class="nt">&gt;</code>
-<code class="lineno"> 8</code>     <code class="nt">&lt;label</code> <code class="na">for=</code><code class="s">"txt_pass"</code><code class="nt">&gt;</code>Password<code class="nt">&lt;/label&gt;</code>
-<code class="lineno"> 9</code>     <code class="nt">&lt;input</code> <code class="na">type=</code><code class="s">"password"</code> <code class="na">class=</code><code class="s">"form-control"</code> 
-<code class="lineno">10</code>       <code class="na">id=</code><code class="s">"txt_pass"</code> <code class="na">placeholder=</code><code class="s">"Password"</code><code class="nt">&gt;</code>
-<code class="lineno">11</code>   <code class="nt">&lt;/div&gt;</code>
-<code class="lineno">12</code>  <code class="nt">&lt;button</code> <code class="na">type=</code><code class="s">"submit"</code> <code class="na">class=</code><code class="s">"btn btn-default"</code><code class="nt">&gt;</code>
-<code class="lineno">13</code>    Submit
-<code class="lineno">14</code>  <code class="nt">&lt;/button&gt;</code>
-<code class="lineno">15</code> <code class="nt">&lt;/form&gt;</code>
-</pre></div>  </div>
-      </div>
-      <hr>
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+   
+<div class="image-with-caption center">
+  <img src="C:\Users\ASUS_\Desktop\lab03/02_11.png" alt="รูปที่ 02-10 ตัวอย่างการสร้างฟอร์ม"><br>รูปที่ 02-10 ตัวอย่างการสร้างฟอร์ม
 </div>
+<br>
+<h4 id="leanpub-auto-inline-form">Inline form</h4>
+<p>การกำหนดรูปแบบ inline form เป็นการทำให้คอนโทรลต่างๆ ของฟอร์มอยู่ในแถวเดียวกัน โดยโดยปกติแล้วหากเราไม่กำหนดค่า <code>.form-inline</code> ในแท็ก <code>&lt;form&gt;</code> คอนโทรลต่างๆ ของฟอ์มจะอยู่คนละแถว หรือคนละบรรทัด เหมือนกับตัวอย่างแรก แต่หากเรากำหนดค่า <code>.form-inliine</code> เข้าไป คอนโทรลต่างๆ จะอยู่ในแถวเดียวกัน
+ในการทำ inline form นั้นเราจะต้องทำการกำหนดค่าความกว้างของคอนโทรล โดยการใช้สไตล์ซีทกำหนดค่า ซึ่งตัวอย่างจะใช้ <code>width</code> ในการกำหนดค่าความกว้างของคอนโทรล หากเราไม่กำหนดเบราเซอร์จะแสดงความกว้างเต็ม <code>100%</code> ซึ่งจะไม่เห็นความแตกต่างในการใช้ <code>.form-inline</code> และหากเราไม่ต้องการให้แสดง <code>&lt;label&gt;</code> เราสามารถกำหนดคลาส <code>.sr-only</code> ให้กับ <code>&lt;label&gt;</code> </p>
 
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
+<div class="code-block">
+  <p class="codeblock-title">ตัวอย่างการสร้าง Inline form</p>
 
+<div class="image-with-caption center">
+  <img src="C:\Users\ASUS_\Desktop\lab03/02_112.png" alt="รูปที่ 02-11 แสดงการสร้างฟอร์มโดยใช้คลาส `.form-inline`"><br>รูปที่ 02-11 แสดงการสร้างฟอร์มโดยใช้คลาส <code>.form-inline</code></p>
+</div>
+<br>
+<h4 id="leanpub-auto-horizontal-form">Horizontal form</h4>
+
+<p>เราสามารถจัดกลุ่มของคอนโทรลกับลาเบล (Label)ให้อยู่ในลักษณะของคอลัมน์ โดยการใช้ <code>.form-horizontal</code>  ร่วมกับกริด (Grid) และ <code>.form-group</code> ในการแบ่งคอลัมน์
+<div class="image-with-caption center">
+  <img src="C:\Users\ASUS_\Desktop\lab03/02_12.png" alt="รูปที่ 02-12 แสดงการสร้างฟอร์มโดยใช้คลาส `.form-horizontal`"><br><p>รูปที่ 02-12 แสดงการสร้างฟอร์มโดยใช้คลาส <code>.form-horizontal</code></p>
+</div>
+<br>
+<h4 id="leanpub-auto-validation-state">Validation State</h4>
+
+<p>เป็นการกำหนดรูปแบบสถานะของคอนโทรลภายในฟอร์ม โดยสามารถกำหนดให้มีสถานะเป็น <code>error</code>, <code>warning</code>, และ <code>success</code> โดยการใส่คลาส <code>.has-error</code>, <code>.has-warning</code> <br>หรือ <code>.has-success</code> ใน element บนสุดของคอนโทรลนั้น รวมไปถึงคลาส <code>.control-label</code>, <code>.form-control</code> และ <code>.help-block</code> ก็จะถูกเปลี่ยนรูปแบบไปด้วย
+<p>แสดงผลลัพธ์ที่ได้ ดังรูป</p>
+
+<div class="image-with-caption center">
+  <img src="C:\Users\ASUS_\Desktop\lab03/02_13.png" alt="รูปที่ 02-13 แสดงการสร้าง Validation State"><br><p>รูปที่ 02-13 แสดงการสร้าง Validation State</p>
+</div>
 </body>
 </html>
 
